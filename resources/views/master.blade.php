@@ -34,10 +34,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
         <div class="loader"></div>
-        @yield('body')
-        <script src="{{ js_asset('master') }}"></script>
+        @yield('master.body')
+        <script src="{{ js_asset('master') }}" type="application/javascript"></script>
         @stack('master.script')
     </body>
 </html>
