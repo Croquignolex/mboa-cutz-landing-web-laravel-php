@@ -8,7 +8,7 @@ if(!function_exists('css_asset'))
      */
     function css_asset($css_file)
     {
-        return '/assets/css/' . $css_file . '.css';
+        return env('PUBLIC_FOLDER') . '/assets/css/' . $css_file . '.css';
     }
 }
 
@@ -20,7 +20,7 @@ if(!function_exists('js_asset'))
      */
     function js_asset($js_file)
     {
-        return  '/assets/js/' . $js_file . '.js';
+        return  env('PUBLIC_FOLDER') . '/assets/js/' . $js_file . '.js';
     }
 }
 
@@ -33,7 +33,7 @@ if(!function_exists('img_asset'))
      */
     function img_asset($img_file, $extension = 'png')
     {
-        return '/assets/img/' . $img_file . '.' . $extension;
+        return env('PUBLIC_FOLDER') . '/assets/img/' . $img_file . '.' . $extension;
     }
 }
 
@@ -45,7 +45,20 @@ if(!function_exists('favicon_img_asset'))
      */
     function favicon_img_asset($favicon)
     {
-        return '/assets/img/favicons/' . $favicon . '.png';
+        return env('PUBLIC_FOLDER') . '/assets/img/favicons/' . $favicon . '.png';
+    }
+}
+
+if(!function_exists('favicon_file_asset'))
+{
+    /**
+     * @param $file
+     * @param string $extension
+     * @return string
+     */
+    function favicon_file_asset($file, $extension = 'json')
+    {
+        return env('PUBLIC_FOLDER') . '/assets/img/favicons/' . $file . '.' . $extension;
     }
 }
 
@@ -57,6 +70,6 @@ if(!function_exists('flag_img_asset'))
      */
     function flag_img_asset($flag)
     {
-        return '/assets/img/flags/' . $flag . '.png';
+        return env('PUBLIC_FOLDER') . '/assets/img/flags/' . $flag . '.png';
     }
 }
