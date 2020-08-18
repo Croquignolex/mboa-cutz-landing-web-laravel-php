@@ -14,5 +14,9 @@ return [
     */
 
     'home' => 'Home',
+    'about' => 'About',
+    'activities' => 'Activities',
+    'schedules' => 'Schedules',
+    'contact' => 'Contact',
 
 ];

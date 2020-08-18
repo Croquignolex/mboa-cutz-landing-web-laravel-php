@@ -3,7 +3,7 @@
 @section('master.title', page_title(trans('page.home')))
 
 @section('master.body')
-
+    @include('partials.home.menu')
 @endsection
 
 @push('master.style')
