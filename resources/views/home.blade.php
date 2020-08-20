@@ -4,6 +4,7 @@
 
 @section('master.body')
     @include('partials.home.menu')
+    @include('partials.home.banner')
 @endsection
 
 @push('master.style')
