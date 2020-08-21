@@ -1,4 +1,4 @@
-<section class="class section" id="class">
+<section class="class section" id="activities">
     <div class="container">
         <div class="row">
 
