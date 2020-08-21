@@ -6,6 +6,9 @@
     @include('partials.home.menu')
     @include('partials.home.banner')
     @include('partials.home.about')
+    @include('partials.home.activities')
+    @include('partials.home.contact')
+    @include('partials.home.footer')
 @endsection
 
 @push('master.style')

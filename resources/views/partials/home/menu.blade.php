@@ -28,10 +28,6 @@
                 </li>
 
                 <li class="nav-item">
-                    <a href="#schedules" class="nav-link smoothScroll">{{ trans('page.schedules') }}</a>
-                </li>
-
-                <li class="nav-item">
                     <a href="#contact" class="nav-link smoothScroll">{{ trans('page.contact') }}</a>
                 </li>
             </ul>
