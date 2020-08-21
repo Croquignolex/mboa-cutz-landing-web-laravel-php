@@ -5,6 +5,7 @@
 @section('master.body')
     @include('partials.home.menu')
     @include('partials.home.banner')
+    @include('partials.home.about')
 @endsection
 
 @push('master.style')

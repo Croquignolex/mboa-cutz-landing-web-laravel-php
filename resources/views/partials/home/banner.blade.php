@@ -12,8 +12,6 @@
 
                     <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Faites confiant à l'expert de tout les cheveux</h1>
 
-{{--                    <a href="#description" class="btn custom-btn mt-3" data-aos="fade-up" data-aos-delay="600">Description</a>--}}
-
                     <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">En savoir plus</a>
 
                 </div>

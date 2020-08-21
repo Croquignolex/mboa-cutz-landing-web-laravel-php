@@ -37,6 +37,19 @@ if(!function_exists('img_asset'))
     }
 }
 
+if(!function_exists('about_img_asset'))
+{
+    /**
+     * @param $img_file
+     * @param $extension
+     * @return string
+     */
+    function about_img_asset($img_file, $extension = 'jpg')
+    {
+        return config('app.folder') . '/assets/img/about/' . $img_file . '.' . $extension;
+    }
+}
+
 if(!function_exists('favicon_img_asset'))
 {
     /**
