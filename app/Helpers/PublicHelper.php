@@ -50,6 +50,19 @@ if(!function_exists('about_img_asset'))
     }
 }
 
+if(!function_exists('activities_img_asset'))
+{
+    /**
+     * @param $img_file
+     * @param $extension
+     * @return string
+     */
+    function activities_img_asset($img_file, $extension = 'jpg')
+    {
+        return config('app.folder') . '/assets/img/activities/' . $img_file . '.' . $extension;
+    }
+}
+
 if(!function_exists('favicon_img_asset'))
 {
     /**
