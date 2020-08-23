@@ -30,7 +30,7 @@
 
   --gray-color:           #909090;
   --link-color:           #404040;
-  --p-color:              #666262;
+  --p-color: #666262;
 
   --base-font-family:     'Plain', sans-serif;
   --font-weight-bold:     bold;
@@ -331,7 +331,7 @@ a:focus {
 }
 
 .hero {
-  background-image: url('../img/hero-bg.jpg');
+  background-image: url('../img/banner.jpg');
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -514,12 +514,13 @@ button#submit-button:hover {
 }
 
 .site-footer {
-  border-top: 1px solid #efebeb;
+  /*border-top: 1px solid #efebeb;*/
   padding: 3rem 0;
+  background-color: var(--dark-color);
 }
 
 .site-footer a {
-  color: var(--p-color);
+  color: var(--about-bg-color);
   font-weight: var(--font-weight-light);
 }
 
@@ -603,4 +604,7 @@ button#submit-button:hover {
 .no-padding-and-margin {
   padding: 0;
   margin: 0;
+}
+.text-theme {
+  color: var(--primary-color)
 }
