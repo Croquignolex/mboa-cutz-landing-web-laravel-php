@@ -8,9 +8,9 @@
             <div class="col-lg-8 col-md-10 mx-auto col-12">
                 <div class="hero-text mt-5 text-center">
 
-                    <h6 data-aos="fade-up" data-aos-delay="300">Une nouvelle unique de vous coiffer</h6>
+                    <h6 data-aos="fade-up" data-aos-delay="300">Une façon unique de prendre soin de vous</h6>
 
-                    <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Faites confiant à l'expert de tout les cheveux</h1>
+                    <h1 class="text-white" data-aos="fade-up" data-aos-delay="500">Faites confiance à l'expert de tout type de cheveux</h1>
 
                     <a href="#about" class="btn custom-btn bordered mt-3" data-aos="fade-up" data-aos-delay="700">En savoir plus</a>
 
@@ -42,18 +42,17 @@
             <div class="mr-lg-auto mt-3 col-lg-4 col-md-6 col-12">
                 <div class="about-working-hours">
                     <div>
-
                         <h2 class="mb-4 text-white" data-aos="fade-up" data-aos-delay="500">Horaires</h2>
 
                         <strong class="d-block" data-aos="fade-up" data-aos-delay="600">Lundi : <span class="text-danger">Fermé</span></strong>
 
                         <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700">Mardi - Samedi</strong>
 
-                        <p data-aos="fade-up" data-aos-delay="800">7:00 - 22:00</p>
+                        <p data-aos="fade-up" data-aos-delay="800">9:00 - 19:30</p>
 
                         <strong class="mt-3 d-block" data-aos="fade-up" data-aos-delay="700">Dimanche</strong>
 
-                        <p data-aos="fade-up" data-aos-delay="800">8:00 - 16:00</p>
+                        <p data-aos="fade-up" data-aos-delay="800">10:00 - 20:00</p>
                     </div>
                 </div>
             </div>
