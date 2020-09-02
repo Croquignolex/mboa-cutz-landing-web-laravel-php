@@ -3,20 +3,11 @@
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\App;
 
-if(!function_exists('languages'))
-{
-    /**
-     * @return array
-     */
-    function languages()
-    {
-        return config('app.locales');
-    }
-}
-
 if(!function_exists('current_language'))
 {
     /**
+     * Get current language
+     *
      * @return string
      */
     function current_language()
@@ -25,63 +16,53 @@ if(!function_exists('current_language'))
     }
 }
 
-if(!function_exists('browser_url'))
+if(!function_exists('language_title'))
 {
     /**
-     * @param $language
+     * Get displayed language in title option into HTML a bracket
+     *
      * @return string
      */
-    function browser_url($language)
+    function language_title()
+    {
+        return (App::getLocale() === config('app.fallback_locale')) ? 'Anglais' : 'French';
+    }
+}
+
+if(!function_exists('language_url'))
+{
+    /**
+     * Get language url in href option into HTML a bracket
+     *
+     * @return string
+     */
+    function language_url()
     {
         $fullUrl = url()->full();
-        $languages = languages();
-
-        if(in_array($language, $languages))
-        {
-            foreach ($languages as $lang)
-            {
-                if(str_contains($fullUrl, $lang)) return str_replace($lang, $language, $fullUrl);
-            }
-        }
-
         $url = config('app.url');
-        return Str::replaceFirst($url, $url . '/' . $language, $fullUrl);
-    }
-}
+        $currentLanguage = App::getLocale();
+        $language = config('app.fallback_locale');
 
-if(!function_exists('language_full_name'))
-{
-    /**
-     * @param $language
-     * @return string
-     */
-    function language_full_name($language)
-    {
-        if(in_array($language, languages())) return trans('language.' . $language);
-        else return 'language.unknown';
-    }
-}
+        // Translation language should be the opposite language of the current language
+        $translationLanguage = ($currentLanguage === $language) ? config('app.secondary_locale') : $language;
 
-if(!function_exists('active_language'))
-{
-    /**
-     * @param $language
-     * @return string
-     */
-    function active_language($language)
-    {
-        return current_language() == $language;
-    }
-}
-
-if(!function_exists('active_language'))
-{
-    /**
-     * @param $language
-     * @return string
-     */
-    function active_language($language)
-    {
-        return current_language() == $language;
+        if(Str::contains($fullUrl, array_map(function($item) {return "/$item";}, config('app.locales'))))
+        {
+            // Replace the current language with translate language into full url (known locale)
+            return Str::replaceFirst(
+                "/$currentLanguage",
+                "/$translationLanguage",
+                $fullUrl
+            );
+        }
+        else
+        {
+            // Replace the url path with url path + language into full url (unknown locale)
+            return Str::replaceFirst(
+                $url,
+                "$url/$translationLanguage",
+                $fullUrl
+            );
+        }
     }
 }

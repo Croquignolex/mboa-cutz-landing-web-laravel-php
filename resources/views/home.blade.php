@@ -20,6 +20,7 @@
 
 @push('master.script')
     <script src="{{ js_asset('jquery.min') }}" type="application/javascript"></script>
+    <script src="{{ js_asset('popper.min') }}" type="application/javascript"></script>
     <script src="{{ js_asset('bootstrap.min') }}" type="application/javascript"></script>
     <script src="{{ js_asset('aos') }}" type="application/javascript"></script>
     <script src="{{ js_asset('smoothscroll') }}" type="application/javascript"></script>

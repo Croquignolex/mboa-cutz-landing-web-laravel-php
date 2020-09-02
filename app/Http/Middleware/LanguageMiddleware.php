@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\App;
 class LanguageMiddleware
 {
     /**
-     * Handle an incoming request.
+     * Handle an incoming request then set the correct language in app
      *
      * @param  Request  $request
      * @param Closure $next
@@ -18,10 +18,12 @@ class LanguageMiddleware
     public function handle($request, Closure $next)
     {
         // Get the route language
-        $language = $request->segment(1);
+        $routeLanguage = $request->segment(1);
+        $fallBackLanguage = config('app.fallback_locale');
+        $language = $routeLanguage;
 
         // return the fallback language if the route language is not in the available languages
-        if(!in_array($language, config('app.locales'))) $language = config('app.fallback_locale');
+        if(!in_array($routeLanguage, config('app.locales'))) $language = $fallBackLanguage;
 
         // Set the correct language
         if(App::getLocale() !== $language) App::setLocale($language);
