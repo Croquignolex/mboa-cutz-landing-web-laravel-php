@@ -46,6 +46,25 @@
                        target="_blank"
                     ></a>
                 </li>
+                <li>
+                    <a title="{{ language_title() }}"
+                       href="{{ language_url() }}"
+                       data-toggle="tooltip"
+                       data-placement="top"
+                       class="fa fa-flag"
+                    ></a>
+                </li>
+            </ul>
+
+            <ul class="social-icon ml-lg-4 mb-2">
+                <li>
+                    <button type="button" class="btn btn-outline-primary">
+                        Produits
+                    </button>
+                    <button type="button" class="btn btn-outline-success">
+                        Services
+                    </button>
+                </li>
             </ul>
         </div>
     </div>
