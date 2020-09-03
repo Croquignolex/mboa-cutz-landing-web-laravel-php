@@ -35,7 +35,6 @@
     </head>
 
     <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
-        <div id="loader"></div>
         @yield('master.body')
         @stack('master.script')
         <script src="{{ js_asset('master') }}" type="application/javascript"></script>
